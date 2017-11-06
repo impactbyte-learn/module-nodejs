@@ -1,0 +1,17 @@
+{
+  "name": "application",
+  "version": "1.0.0",
+  "description": "An application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "app"
+  ],
+  "author": "M Haidar Hanif <npm@mhaidarhanif.com> (https://mhaidarhanif.com)",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "0.25.0"
+  }
+}

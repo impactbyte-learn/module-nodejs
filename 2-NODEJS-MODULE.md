@@ -1,36 +1,68 @@
 # Node.js Module
 
+--------------------------------------------------------------------------------
+
 ## Module built-in
 
+Node.js punya beberapa module yang bisa langsung kita pakai
+
 ```js
+require("path")
+require("fs")
+require("http")
+require("assert")
 ```
+
+Yang secara lengkap dijelaskan di dokumentasinya https://nodejs.org/api/modules.html
+
+--------------------------------------------------------------------------------
 
 ## Import dan export module
 
+Kita bisa mengimpor module built-in tersebut.
+
 ```js
-const something = require('./something') // tidak perlu menulis ekstensinya
+const path = require("path") // tidak perlu menulis ekstensinya
 ```
+
+Ataupun module yang kita buat sendiri nantinya.
+
+```js
+const something = require("./something")
+```
+
+--------------------------------------------------------------------------------
 
 ## npm
 
-npm is ...
+Di dunia Node, package dan dependency manager utamanya adalah npm https://npmjs.com
 
-Dependency is a way to ...
+npm sendiri merangkap sebagai website, registry, platform, dan ekosistem Node.
 
-We can use `npm` as such:
+Dependency adalah suatu unsur metode untuk memisahkan dan mengintegrasikan berbagai program berbeda menjadi program yang utuh.
+
+Kita bisa menggunakan `npm` di terminal
 
 ```sh
-npm
+$ npm -v
+5.5.0
 ```
 
-To make our Node app have access to available node modules through npm, we have to create a `package.json`, which is a config file that will store our node app metadata:
+--------------------------------------------------------------------------------
+
+## Mengakses npm
+
+Untuk menjadikan project Node kita bisa mengakses berbagai module yang ada di npm, kita perlu menginisialisasi file `package.json`, sebuah file config yang akan menyimpan metadata project kita.
+
+Sebelumnya, buatlah folder khusus terlebih dahulu.
 
 ```sh
 npm init
-# you will be asked some questions, fill it based on your preference
+# kita akan ditanyakan berbagai pertanyaan
+# isilah sesuai preferensi
 ```
 
-After initialization, you will see a `package.json` created in your directory.
+Setelah itu kita akan lihat file `package.json` yang berisi seperti:
 
 ```json
 {
@@ -46,48 +78,42 @@ After initialization, you will see a `package.json` created in your directory.
 }
 ```
 
-### Installing modules with npm or Yarn
+--------------------------------------------------------------------------------
 
-1. **Installing package as a dependency**: Usually when we need to use the package as a library that will directly required in the app.
-2. **Installing package as a development dependency**: Usually when we need to use the package as a utility that used in the repo, not directly required in the app.
-3. **Installing package as globally accessible**: Usually when the package is executable to be run as a program instead of just a library inside an app.
+## Cara instalasi module/package dengan npm
 
-| No | Normal | Shorter | Yarn
-|----|--------|---------|------
-| 1  | `npm install --save package` | `npm i -S package` | `yarn add package`
-| 2  | `npm install --save-dev package` | `npm i -D package` | `yarn add --dev package`
-| 3  | `npm install --global package` | `npm i -g package` | `yarn global add package`
+1. **Instal sebagai dependency biasa**: Dilakukan saat menggunakan module sebagai library yang akan digunakan secara langsung di aplikasi kita.
+2. **Instal sebagai dependency development**: Dilakukan saat menggunakan module sebagai utility yang digunakan di project/repo, tidak secara langsung di dalam aplikasi kita.
+3. **Instal sebagai aplikasi/CLI global**: Dilakukan saat menjadikan module sebagai program yang dapat digunakan di manapun, bukan sebagai library di dalam aplikasi
 
-Let's try to create a Node project with npm:
+Normal | Lebih pendek
+-------|-------------
+`npm install --save package` | `npm i -S package`
+`npm install --save-dev package` | `npm i -D package`
+`npm install --global package` | `npm i -g package`
 
-Create a new project folder
+Cara uninstall bisa melalui `npm uninstall` atau mengedit `package.json`.
 
-```sh
-mkdir <folder_name>
-```
+--------------------------------------------------------------------------------
 
-Navigate into the folder
+## Menggunakan module yang sudah terinstal
 
-```sh
-cd <folder_name>
-```
-
-Initialize a `package.json`
+Instal suatu module sebagai library.
 
 ```sh
-npm init
-# or
-yarn init
+npm install --save ramda
 ```
 
-Install a local package you'd like to try
+Lihatlah perubahan pada file `package.json` dan adanya folder `node_modules/` folder.
 
-```sh
-npm install --save colors
-# or
-yarn add colors
+Pada repositori Git, folder `node_modules` ini HARUS di-ignore.
+
+Gunakan module tersebut di aplikasi kita.
+
+```js
+const R = require("ramda")
+
+const result = R.add(1, 2)
+
+console.log(result)
 ```
-
-Take a look into the `package.json` file and the `node_modules/` folder. See what happens.
-
-Find out how to uninstall a node package from package.json

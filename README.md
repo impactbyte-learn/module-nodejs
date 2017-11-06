@@ -1,5 +1,7 @@
 # [Module: Node.js](https://gitlab.com/impactbyte-arkademy/module-nodejs)
 
+--------------------------------------------------------------------------------
+
 ## Outline
 
 - JavaScript and Node.js
@@ -15,11 +17,15 @@
 - Using npm
 - HTTP server
 
+--------------------------------------------------------------------------------
+
 ## Sections
 
 - [Part 1](./1-NODEJS-DASAR.md)
 - [Part 2](./2-NODEJS-MODULE.md)
 - [Part 3](./3-NODEJS-SERVER.md)
+
+--------------------------------------------------------------------------------
 
 ## References
 
