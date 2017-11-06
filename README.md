@@ -30,12 +30,13 @@
 ## References
 
 - [Node.js](https://nodejs.org/en)
+- [Node Hero - Your First Node.js HTTP Server | @RisingStack](https://blog.risingstack.com/your-first-node-js-http-server)
 - [`Pana/node-books`](https://github.com/Pana/node-books)
+- [RisingStack bootcamp](https://github.com/RisingStack/risingstack-bootcamp)
 - [Mixu's Node book: A book about using Node.js](http://book.mixu.net/node)
 - [The Node Beginner Book - A comprehensive Node.js tutorial](https://www.nodebeginner.org)
-- [](https://github.com/azat-co/practicalnode)
-- [](https://github.com/RisingStack/risingstack-bootcamp)
-- [](https://node.university/courses/category/free)
-- [](https://thenewstack.io/open-source-profile-mikeal-rogers-node-js)
+- [Practical Node.js: Building Real-World Scalable Web Apps](https://github.com/azat-co/practicalnode)
+- [Mikeal Rogers: Node.js Will Overtake Java Within a Year](https://thenewstack.io/open-source-profile-mikeal-rogers-node-js)
 - [Mastering Node - Open Source Nodejs eBook](https://visionmedia.github.io/masteringnode)
+- [Node University: Courses on Node.js, React and JavaScript](https://node.university/courses/category/free)
 - [Introduction to Node: The Fundamentals](https://egghead.io/courses/introduction-to-node-the-fundamentals)

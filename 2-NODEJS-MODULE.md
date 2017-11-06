@@ -117,3 +117,10 @@ const result = R.add(1, 2)
 
 console.log(result)
 ```
+
+Lalu jalankan.
+
+```sh
+$ node index.js
+3
+```
