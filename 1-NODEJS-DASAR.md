@@ -30,6 +30,8 @@ Oke santai aja, minimal kita tahu dulu berbagai istilah tersebut.
 
 Mari kita lakukan instalasi Node.js di komputer kita melalui terminal.
 
+Catatan: Simbol `$` adalah tanda di mana kita harus mengetikkan perintah di terminal. Sedangkan jika tidak ada simbol berarti adalah output-nya. Atau didahului tanda `#` atau `//` berarti adalah komentar.
+
 ```sh
 # di debian/ubuntu
 $ sudo apt install node
@@ -96,11 +98,28 @@ undefined
 
 Secara default, Node memiliki beberapa variabel global yang dapat diakses dan dimodifikasi, seperti `global`, `process`, dll
 
+Biasanya variabel `process.env` sering digunakan untuk menyimpan configuration ataupun credentials yang sifatnya bisa digunakan di dalam aplikasi kita di 
+
+```js
+> process.env
+// berbagai variabel environment
+> process.env.NODE_ENV
+undefined
+> process.env.NODE_ENV = "development"
+'development'
+> console.log(process.env.NODE_ENV)
+'development'
+```
+
 --------------------------------------------------------------------------------
 
 ## File JavaScript sebagai program Node
 
-Mari kita buat program JavaScript sederhana di dalam file yang dapat dijalankan oleh Node.
+Mari kita buat program JavaScript/Node sederhana di dalam file yang dapat dijalankan oleh Node.
+
+Cukup hanya dengan code editor dan terminal, program bisa kita buat dan jalankan.
+
+Kita akan membuat program yang bisa mencetak string "Hello World" di terminal kita.
 
 Buatlah file `index.js` di suatu direktori lalu isi melalui code editor.
 
@@ -114,9 +133,10 @@ function log(string) {
 log(TEXT)
 ```
 
-Jalankan dengan Node.
+Kemudian jalankan file tersebut pada direktori yang sama dengan Node.
 
 ```sh
+$ node <namafile.js> # contoh
 $ node index.js
 Hello World
 ```
