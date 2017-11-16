@@ -78,27 +78,42 @@ Setelah itu kita akan lihat file `package.json` yang berisi seperti:
 }
 ```
 
+Terkait metadata apa saja yang memungkinkan beserta kegunaannya, bisa lihat dokumentasinya di <https://docs.npmjs.com/files/package.json>.
+
 --------------------------------------------------------------------------------
 
 ## Cara instalasi module/package dengan npm
 
 1. **Instal sebagai dependency biasa**: Dilakukan saat menggunakan module sebagai library yang akan digunakan secara langsung di aplikasi kita.
 2. **Instal sebagai dependency development**: Dilakukan saat menggunakan module sebagai utility yang digunakan di project/repo, tidak secara langsung di dalam aplikasi kita.
-3. **Instal sebagai aplikasi/CLI global**: Dilakukan saat menjadikan module sebagai program yang dapat digunakan di manapun, bukan sebagai library di dalam aplikasi
+3. **Instal sebagai aplikasi/CLI global**: Dilakukan saat menjadikan module sebagai program yang dapat dijalankan di directory manapun, dapat diakses oleh semua project, bukan sebagai library di dalam aplikasi. Juga package tersebut tidak akan masuk ke dalam `package.json`.
 
 Normal | Lebih pendek
 -------|-------------
-`npm install --save package` | `npm i -S package`
-`npm install --save-dev package` | `npm i -D package`
-`npm install --global package` | `npm i -g package`
+`npm install --save nama_package` | `npm i -S nama_package`
+`npm install --save-dev nama_package` | `npm i -D nama_package`
+`npm install --global nama_package` | `npm i -g nama_package`
 
-Cara uninstall bisa melalui `npm uninstall` atau mengedit `package.json`.
+Nanti saat kita instalasikan, terdapat property `dependencies` & `devDependencies` di dalam `package.json` kita.
+
+```json
+...
+  "devDependencies": {
+    "nama_package": "1.2.3"
+  },
+  "dependencies": {
+    "nama_package": "~1.2.3"
+  }
+...
+```
+
+Cara uninstall bisa melalui `npm uninstall` atau mengedit `package.json`-nya secara langsung.
 
 --------------------------------------------------------------------------------
 
 ## Menggunakan module yang sudah terinstal
 
-Instal suatu module sebagai library.
+Instal suatu module sebagai library. Misalnya [Ramda.js](http://ramdajs.com), sebuah library untuk menggunakan berbagai program functional di JavaScript, seperti fungsi matematika, loop dengan map, filter, reduce, dan lainnya.
 
 ```sh
 npm install --save ramda
