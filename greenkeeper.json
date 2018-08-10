@@ -1,0 +1,9 @@
+{
+  "groups": {
+    "default": {
+      "packages": [
+        "code/2-NODEJS-MODULE/package.json"
+      ]
+    }
+  }
+}
