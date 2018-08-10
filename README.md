@@ -1,5 +1,7 @@
 # [Module: Node.js](https://gitlab.com/impactbyte-arkademy/module-nodejs)
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/impactbyte-learn/module-nodejs.svg)](https://greenkeeper.io/)
+
 --------------------------------------------------------------------------------
 
 ## Outline
